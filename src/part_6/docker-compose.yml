@@ -1,0 +1,14 @@
+services:
+  my_server:
+    image: my_server:new
+    container_name: my_server
+
+  
+  nginx:
+    image: nginx:latest
+    container_name: nginx
+    ports: 
+      - 80:8080
+    volumes:
+      - ./nginx/nginx2.conf:/etc/nginx/nginx.conf
+
